@@ -20,5 +20,14 @@ namespace FaceShop.Service
         {
             return db.Users.Where(x => x.Id == id).FirstOrDefault();
         }
+        public User LoginByUsernameAndPassword(Login input)
+        {
+            var user = db.Users.SingleOrDefault(x => x.Email == input.Email && x.PassWord == input.PassWord);
+            if (user == null)
+            {
+                return null;
+            }
+            return user;
+        }
     }
 }

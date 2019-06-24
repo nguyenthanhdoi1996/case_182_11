@@ -32,12 +32,21 @@ namespace FaceShop.Controllers
         {
             return userService.GetAll();
         }
-
-        [Route("GetAllById/{id}")]
-        [HttpGet]
-        public User GetOrderById(long id)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [Route("LoginByUsernameAndPassword")]
+        [HttpPost]
+        public ActionResult LoginByUsernameAndPassword([FromBody]Login input)
         {
-            return userService.GetOrderById(id);
+            var user = userService.LoginByUsernameAndPassword(input);
+            if(user == null)
+            {
+                return BadRequest(new { message = "user name or password is inconnect" });
+            }
+            return Ok(user);
         }
     }
 }

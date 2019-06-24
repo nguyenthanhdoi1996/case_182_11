@@ -10,6 +10,6 @@ namespace FaceShop.Interface
     interface IUserService
     {
         List<User> GetAll();
-        User GetOrderById(long id);
+        User LoginByUsernameAndPassword(Login input);
     }
 }
