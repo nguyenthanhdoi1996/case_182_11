@@ -10,6 +10,7 @@ namespace FaceShop.Interface
     interface IProductService
     {
         List<Product> GetAll();
-        Product GetCartrById(long id);
+        Product GetAllById(long id);
+        Product GetProducByUserId(long id);
     }
 }

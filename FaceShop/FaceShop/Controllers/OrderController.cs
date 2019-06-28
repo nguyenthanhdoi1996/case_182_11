@@ -39,5 +39,33 @@ namespace FaceShop.Controllers
         {
             return orderService.GetOrderById(id);
         }
+
+        [Route("GetAllByOrderDetailId/{id}")]
+        [HttpGet]
+        public Order GetOrderByOrderDetalId(long id)
+        {
+            return orderService.GetOrderByOrderDetalId(id);
+        }
+        [Route("searchOrderByUserId/{id}")]
+        [HttpGet]
+        public ApiJsonResult GetOrderByUserId(long id)
+        {
+            var Order = orderService.GetOrderByUserId(id);
+            return new ApiJsonResult { Success = true, Data = Order };
+        }
+        [Route("GetAllByUserId/{id}")]
+        [HttpGet]
+        public ApiJsonResult GetAllByUserId(long id)
+        {
+            var Order = orderService.GetAllByUserId(id);
+            return new ApiJsonResult { Success = true, Data = Order };
+        }
+        [Route("LockOrderByOrderId/{id}")]
+        [HttpPut]
+        public ApiJsonResult LockOrderByOrderId(long id)
+        {
+             orderService.LockOrderByUserId(id);
+            return new ApiJsonResult { Success = true, Data = null };
+        }
     }
 }

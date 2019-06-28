@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent ,
   children: [
-    {path: 'order', component: OrderComponent },
-    {path: 'orderDetail', component: OrdedetailComponent },
+    {path: 'order/:id', component: OrderComponent },
+    {path: 'orderDetail/:id', component: OrdedetailComponent },
   ]
   },
   {path: 'login', component: LoginComponent },

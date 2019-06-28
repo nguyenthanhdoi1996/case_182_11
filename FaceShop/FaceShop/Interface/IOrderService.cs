@@ -11,5 +11,9 @@ namespace FaceShop.Interface
     {
         List<Order> GetAll();
         Order GetOrderById(long id);
+        Order GetOrderByOrderDetalId(long id);
+        SearchOrder GetOrderByUserId(long id);
+        List<Order> GetAllByUserId(long id);
+        void LockOrderByUserId(long id);
     }
 }

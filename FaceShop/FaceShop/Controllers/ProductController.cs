@@ -35,9 +35,18 @@ namespace FaceShop.Controllers
 
         [Route("GetAllById/{id}")]
         [HttpGet]
-        public Product GetOrderById(long id)
+        public Product GetAllById(long id)
         {
-            return productService.GetCartrById(id);
+            return productService.GetAllById(id);
         }
+
+        [Route("GetProducByUserId/{id}")]
+        [HttpGet]
+        public Product GetProducByUserId(long id)
+        {
+            return productService.GetProducByUserId(id);
+        }
+
+ 
     }
 }

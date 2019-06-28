@@ -17,7 +17,6 @@ C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\bin\Debug\netcoreapp2.1\Face
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\bin\Debug\netcoreapp2.1\FaceShop.runtimeconfig.dev.json
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\bin\Debug\netcoreapp2.1\FaceShop.dll
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\bin\Debug\netcoreapp2.1\FaceShop.pdb
-C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.csprojAssemblyReference.cache
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.RazorAssemblyInfo.cache
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.RazorAssemblyInfo.cs
@@ -26,3 +25,4 @@ C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\Face
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.RazorTargetAssemblyInfo.cache
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.dll
 C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.pdb
+C:\Users\ASUS\Desktop\case_182_11\FaceShop\FaceShop\obj\Debug\netcoreapp2.1\FaceShop.csprojAssemblyReference.cache

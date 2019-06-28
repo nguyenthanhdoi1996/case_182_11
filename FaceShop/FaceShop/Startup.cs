@@ -38,7 +38,7 @@ namespace FaceShop
             options => options.AddPolicy(
                 "http://localhost:4200",
                     builder => builder
-                    .WithOrigins("http://localhost", "http://localhost:4200")
+                    .WithOrigins("http://localhost", "http://localhost:4200", "http://192.168.99.100")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials()

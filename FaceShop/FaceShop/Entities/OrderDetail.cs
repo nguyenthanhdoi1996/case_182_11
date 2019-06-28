@@ -14,5 +14,7 @@ namespace FaceShop.Entities
         public long Price { get; set; }
         public long OrderId { get; set; }
         public long ProductId { get; set; }
+        public long UserId { get; set; }
+        public long IsOrder { get; set; }
     }
 }

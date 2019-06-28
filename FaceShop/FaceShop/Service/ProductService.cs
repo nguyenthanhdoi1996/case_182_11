@@ -16,7 +16,11 @@ namespace FaceShop.Service
         {
             return db.Products.ToList();
         }
-        public Product GetCartrById(long id)
+        public Product GetAllById(long id)
+        {
+            return db.Products.Where(x => x.Id == id).FirstOrDefault();
+        }
+        public Product GetProducByUserId(long id)
         {
             return db.Products.Where(x => x.Id == id).FirstOrDefault();
         }

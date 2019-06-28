@@ -17,5 +17,7 @@ namespace FaceShop.Entities
         public long Total { get; set; }
         public long PaymentType { get; set; }
         public string Status { get; set; }
+        public long UserId { get; set; }
+        public long IsOrder { get; set; }
     }
 }

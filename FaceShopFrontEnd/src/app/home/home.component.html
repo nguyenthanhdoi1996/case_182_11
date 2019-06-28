@@ -35,13 +35,13 @@
       <button *ngIf="isUser" class="tk" mat-button [matMenuTriggerFor]="menu"><mat-icon aria-label="Side nav toggle icon">account_circle</mat-icon>{{user.name}}</button>
       <mat-menu #menu="matMenu">
       <button mat-menu-item>Thông tin</button>
-      <button mat-menu-item>Đơn hàng</button>
+      <button mat-menu-item (click)="order()">Đơn hàng của tôi</button>
       <button mat-menu-item>Lịch sử giao dịch</button>
       <button mat-menu-item  (click)="logout()">Logout</button>
 </mat-menu>
     </mat-toolbar>
-    
-    <router-outlet></router-outlet>
+    <div >
+      <router-outlet></router-outlet></div>
     <ng-content></ng-content>
     
   </mat-sidenav-content>

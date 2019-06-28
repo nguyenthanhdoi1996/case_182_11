@@ -30,11 +30,13 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    debugger
     this.user=JSON.parse(localStorage.getItem('user'));
     if(this.user.name != null){
       this.isUser = true;
     }
+  }
+  order(){
+    this.router.navigate(["home/order",this.user.id]);
   }
   logout(){
     localStorage.removeItem('user');
