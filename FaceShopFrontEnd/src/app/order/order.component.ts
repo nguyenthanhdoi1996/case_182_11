@@ -32,12 +32,12 @@ export class OrderComponent implements OnInit {
         console.log(x);
       });
   }
-   showCreateModal(order: { id: any; }) {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
-      data: {name: order}
-    });
-    this.router.navigate(["home/orderDetail", order.id]);
+   showCreateModal(id) {
+    // const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    //   width: '250px',
+    //   data: {name: order}
+    // });
+    this.router.navigate(["home/orderDetail", id]);
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log('The dialog was closed');
     //   this.animal = result;
@@ -48,21 +48,21 @@ export class OrderComponent implements OnInit {
     this.showAddNew = false;
   }
 }
-@Component({
-    selector: 'dialog-overview-example-dialog',
-    templateUrl: 'viewordernotifi.html',
-  })
-  export class DialogOverviewExampleDialog {
+// @Component({
+//     selector: 'dialog-overview-example-dialog',
+//     templateUrl: 'viewordernotifi.html',
+//   })
+//   export class DialogOverviewExampleDialog {
   
-    constructor(
-      public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-      @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+//     constructor(
+//       public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+//       @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
   
-    onNoClick(): void {
-      this.dialogRef.close();
-    }
+//     onNoClick(): void {
+//       this.dialogRef.close();
+//     }
   
-  }
-export interface DialogData {
-    Order: any;
-  }
+//   }
+// export interface DialogData {
+//     Order: any;
+//   }

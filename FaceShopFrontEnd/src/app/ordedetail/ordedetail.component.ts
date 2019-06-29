@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Inject} from '@angular/core';
 import { ActivatedRoute ,Router} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-ordedetail',
@@ -14,6 +15,7 @@ export class OrdedetailComponent implements OnInit {
   orderdetai: any;
   index: number;
   constructor(
+    public dialog: MatDialog,
     private route: ActivatedRoute,
     private http: HttpClient,
     public router: Router,
@@ -35,11 +37,58 @@ export class OrdedetailComponent implements OnInit {
   quaylai() {
     this.router.navigate(["/home"]);
   }
-  huydonhang() {
-    this.http.get('https://localhost:44346/api/Order/LockOrderByOrderId/' + this.id).subscribe(x => {
-      this.router.navigate(["/home"]);
-      console.log(x);
+  huydonhang(order) {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      width: '550px', height: '300px',
+      data: {name: order , Id :this.id}
     });
-    
   }
+}
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'viewordernotifi.html',
+})
+export class DialogOverviewExampleDialog {
+
+  constructor(
+    private http: HttpClient,
+    public router: Router,
+    public dialog: MatDialog,
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    quaylai(): void {
+    this.dialogRef.close();
+  }
+  huydonhang() {
+    this.http.get('https://localhost:44346/api/Order/LockOrderByOrderId/' + this.data.Id).subscribe(x => {
+ 
+    console.log(x);
+  });
+  const dialogRef = this.dialog.open(DialogOverviewExampleDial, {
+    width: '550px', height: '300px',
+  });
+  this.dialogRef.close();
+  this.router.navigate(["/home"]);
+  }
+
+}
+@Component({
+  selector: 'dialog-overview-example-dial',
+  templateUrl: 'notifi.html',
+})
+export class DialogOverviewExampleDial {
+
+  constructor(
+    private http: HttpClient,
+    public router: Router,
+    public dialogRef: MatDialogRef<DialogOverviewExampleDial>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    quaylai(): void {
+      this.dialogRef.close();
+    }
+}
+export interface DialogData {
+  name: string;
+  Id: number;
 }

@@ -27,7 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './share/menu/menu.component';
 import { OrderComponent } from './order/order.component';
-import {  DialogOverviewExampleDialog } from './order/order.component';
+import {  DialogOverviewExampleDialog , DialogOverviewExampleDial} from './ordedetail/ordedetail.component';
 import { OrdedetailComponent } from './ordedetail/ordedetail.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -44,9 +44,9 @@ import { ListhistoryComponent } from './listhistory/listhistory.component';
     LoginComponent,
     ListorderComponent,
     ListhistoryComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog, DialogOverviewExampleDial
   ],
-  entryComponents: [DialogOverviewExampleDialog],
+  entryComponents: [DialogOverviewExampleDialog, DialogOverviewExampleDial],
   imports: [
     BrowserModule,
     AppRoutingModule, HttpClientModule,
