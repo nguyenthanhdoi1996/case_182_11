@@ -27,10 +27,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './share/menu/menu.component';
 import { OrderComponent } from './order/order.component';
-//import { OrderComponent, DialogOverviewExampleDialog } from './order/order.component';
+import {  DialogOverviewExampleDialog } from './order/order.component';
 import { OrdedetailComponent } from './ordedetail/ordedetail.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ListorderComponent } from './listorder/listorder.component';
+import { ListhistoryComponent } from './listhistory/listhistory.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,11 @@ import { LoginComponent } from './login/login.component';
     OrdedetailComponent,
     HomeComponent,
     LoginComponent,
-    //DialogOverviewExampleDialog
+    ListorderComponent,
+    ListhistoryComponent,
+    DialogOverviewExampleDialog
   ],
- // entryComponents: [DialogOverviewExampleDialog],
+  entryComponents: [DialogOverviewExampleDialog],
   imports: [
     BrowserModule,
     AppRoutingModule, HttpClientModule,

@@ -38,6 +38,9 @@ export class HomeComponent implements OnInit {
   order(){
     this.router.navigate(["home/order",this.user.id]);
   }
+  horder(){
+    this.router.navigate(["home/historyOrder",this.user.id]);
+  }
   logout(){
     localStorage.removeItem('user');
     this.router.navigate(["login"]);

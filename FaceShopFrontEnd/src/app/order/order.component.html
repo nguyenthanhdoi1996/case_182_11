@@ -19,7 +19,7 @@
               <div class="col-md-6">
                 <div  class="form-group custom-list-option" >
                   <label for="pack" class="custom-option">
-                    Ngày đặt hàng: <strong>{{p.datetime}}</strong>
+                    Ngày đặt hàng: <strong>{{p.datetime |date:'dd/MM/yyyy-hh:mm'}}</strong>
                   </label>
                 </div>
               </div>
@@ -44,7 +44,7 @@
               <div class="col-md-6">
                 <div  class="form-group custom-list-option" >
                   <label for="pack" class="custom-option">
-                    Tổng tiền: <strong>{{p.total}}</strong>
+                    Tổng tiền: <strong>{{p.total|number}} VNĐ</strong>
                   </label>
                 </div>
               </div>

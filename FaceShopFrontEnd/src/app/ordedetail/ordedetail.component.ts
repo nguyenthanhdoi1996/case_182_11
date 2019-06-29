@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute ,Router} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -16,6 +16,7 @@ export class OrdedetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
+    public router: Router,
   ) { }
 
   async ngOnInit() {
@@ -31,5 +32,14 @@ export class OrdedetailComponent implements OnInit {
       console.log(x);
     });
   }
-
+  quaylai() {
+    this.router.navigate(["/home"]);
+  }
+  huydonhang() {
+    this.http.get('https://localhost:44346/api/Order/LockOrderByOrderId/' + this.id).subscribe(x => {
+      this.router.navigate(["/home"]);
+      console.log(x);
+    });
+    
+  }
 }

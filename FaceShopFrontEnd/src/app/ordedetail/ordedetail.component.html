@@ -19,14 +19,14 @@
                 <div class="col-md-4">
                   <div  class="form-group custom-list-option" >
                     <label for="pack" class="custom-option">
-                      Ngày đặt hàng: <strong>{{order.datetime}}</strong>
+                      Ngày đặt hàng: <strong>{{order.datetime|date:'dd/MM/yyyy-hh:mm'}}</strong>
                     </label>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div  class="form-group custom-list-option" >
                     <label for="pack" class="custom-option">
-                      Tổng tiền: <strong>{{order.total}}VNĐ</strong>
+                      Tổng tiền: <strong>{{order.total|number}}VNĐ</strong>
                     </label>
                   </div>
                 </div>
@@ -72,25 +72,25 @@
                     <th style="width:10%">Số lượng</th>
                     <th style="width:20%">Giá sản phẩm</th>
                   </tr>
-                  <tr  *ngFor="let item of orderdetai.data.listsearchOrderDetail">
-                    <td style="width:5%">{{item.product.id}}</td>
-                    <td style="width:25%;height: 100%;"><a href="{{item.product.image}}"  style="height: 120px; width:12px;"></a></td>
+                  <tr  *ngFor="let item of orderdetai.data.listsearchOrderDetail;let i = index">
+                    <td style="width:5%">{{i + x1}}</td>
+                    <td style="width:25%;height: 100%;"><img src="{{item.product.image}}" style="height: 120px; width:120px" class="img-fluid" alt=""></td>
                     <td style="width:20%">{{item.product.code}}</td>
                     <td style="width:20%">{{item.product.name}}</td>
                     <td style="width:10%">{{item.orderDetail.qty}}</td>
-                    <td style="width:20%">{{item.product.price}} VNĐ</td>
+                    <td style="width:20%">{{item.product.price|number}} VNĐ</td>
                   </tr>
                 </table>
               </div>
               
             </div>
-            <div class="row">
+            <div class="row" style="padding-top: 50px">
               <div class="col-md-4" style="float: right">
-                <button (click)="showCreateModal(p.id, p)" class="btn btn-flat btn-lg btn-block btn-block">Quay lại</button>
+                <button  (click)="quaylai()" style="background-color: #696969" class="btn btn-flat btn-lg btn-block btn-block">Quay lại</button>
               </div>
               <div class="col-md-4"></div>
               <div class="col-md-4" style="float: right">
-                <button (click)="showCreateModal(p.id, p)" class="btn btn-flat btn-lg btn-block btn-block">Hủy đơn hàng</button>
+                <button (click)="huydonhang()" style="background-color: coral" class="btn btn-flat btn-lg btn-block btn-block">Hủy đơn hàng</button>
               </div>
             </div>
         </div>

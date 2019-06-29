@@ -62,6 +62,7 @@ namespace FaceShop.Service
         {
             var order = db.Orders.Where(x => x.Id == id).FirstOrDefault();
             order.IsOrder = 0;
+            order.Status = "Đã hủy";
             db.Orders.Update(order);
             db.SaveChanges();
         }

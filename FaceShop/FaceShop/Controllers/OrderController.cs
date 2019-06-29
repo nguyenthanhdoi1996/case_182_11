@@ -61,7 +61,7 @@ namespace FaceShop.Controllers
             return new ApiJsonResult { Success = true, Data = Order };
         }
         [Route("LockOrderByOrderId/{id}")]
-        [HttpPut]
+        [HttpGet]
         public ApiJsonResult LockOrderByOrderId(long id)
         {
              orderService.LockOrderByUserId(id);
